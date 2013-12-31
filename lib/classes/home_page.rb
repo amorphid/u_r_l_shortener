@@ -1,6 +1,7 @@
 class HomePage
   def body
-    "URL Shortener"
+    home_page = File.read("./lib/templates/home_page.html.erb")
+    ERB.new(home_page).result
   end
 
   def headers
