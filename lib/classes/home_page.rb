@@ -1,4 +1,8 @@
 class HomePage
+  def body
+    "URL Shortener"
+  end
+
   def headers
     {}
   end

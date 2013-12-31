@@ -3,6 +3,13 @@ require "spec_helper"
 describe HomePage do
   let(:home_page) { HomePage.new }
 
+  context "#body" do
+    it "returns body" do
+      body = home_page.body
+      expect(body).to include("URL Shortener")
+    end
+  end
+
   context "#headers" do
     it "returns headers" do
       headers = home_page.headers
