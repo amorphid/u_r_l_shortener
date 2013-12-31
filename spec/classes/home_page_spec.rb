@@ -18,9 +18,14 @@ describe HomePage do
   end
 
   context "#response" do
+    let(:home_page_template) do
+      template = File.read("./lib/templates/home_page.html.erb")
+      ERB.new(template).result
+    end
+
     it "returns a response w/ status_code, headers, and body" do
       response = home_page.response
-      expect(response).to eq([200, {}, "URL Shortener"])
+      expect(response).to eq([200, {}, home_page_template])
     end
   end
 
