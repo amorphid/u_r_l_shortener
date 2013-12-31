@@ -7,6 +7,7 @@
 
 # To run tests, the ruby files in lib must be loaded
 require "capybara/rspec"
+require "pry"
 
 files = Dir["./lib/**/*.rb"]
 files.each { |file| require file }
