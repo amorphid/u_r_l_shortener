@@ -17,6 +17,13 @@ describe HomePage do
     end
   end
 
+  context "#response" do
+    it "returns a response w/ status_code, headers, and body" do
+      response = home_page.response
+      expect(response).to eq([200, {}, "URL Shortener"])
+    end
+  end
+
   context "#status_code" do
     it "returns a status code" do
       status_code = home_page.status_code
