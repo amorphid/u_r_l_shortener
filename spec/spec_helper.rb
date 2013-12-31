@@ -6,6 +6,8 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 # To run tests, the ruby files in lib must be loaded
+require "capybara/rspec"
+
 files = Dir["./lib/**/*.rb"]
 files.each { |file| require file }
 
@@ -14,9 +16,9 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
 
-  # Run specs in random order to surface order dependencies. If you find an
-  # order dependency and want to debug it, you can fix the order by providing
-  # the seed, which is printed after each run.
-  #     --seed 1234
+  # Enables Capybara feature tests
+  Capybara.app = URLShortener.new
+
+  # Run specs in random order to surface order dependencies
   config.order = 'random'
 end
