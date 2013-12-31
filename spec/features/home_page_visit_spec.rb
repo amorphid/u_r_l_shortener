@@ -3,8 +3,8 @@ require "spec_helper"
 feature URLShortener do
   background { visit "/" }
 
-  scenario "displays text" do
-    body = page.body
-    expect(body).to have_content("URL Shortener")
+  scenario "page has a title" do
+    title = page.title
+    expect(title).to eq("URL Shortener")
   end
 end
