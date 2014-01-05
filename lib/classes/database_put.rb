@@ -1,0 +1,2 @@
+class DatabasePut
+end
