@@ -4,6 +4,7 @@ gem "activerecord", "4.0.2"
 gem "pg", "0.17.1"
 gem "pry", "0.9.12.4"
 gem "rack", "1.5.2"
+gem "rake", "10.1.0"
 
 group :test do
   gem "capybara", "2.2.0"
