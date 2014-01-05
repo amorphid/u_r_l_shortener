@@ -6,7 +6,7 @@ feature "Submitting a URL to shorten" do
 
   context "via a web form" do
     scenario "loads the home page" do
-      fill_in :long_url, with: "http://www.foo.com"
+      fill_in "forward[long_url]", with: "http://www.foo.com"
       click_button "Submit"
       expect(current_path).to eq(root_path)
     end
