@@ -9,7 +9,7 @@ class HomePage
   end
 
   def response
-    [status_code, headers, body]
+    [status_code, headers, [body]]
   end
 
   def status_code

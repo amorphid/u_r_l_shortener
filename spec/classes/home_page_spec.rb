@@ -25,7 +25,7 @@ describe HomePage do
 
     it "returns a response w/ status_code, headers, and body" do
       response = home_page.response
-      expect(response).to eq([200, {}, home_page_template])
+      expect(response).to eq([200, {}, [home_page_template]])
     end
   end
 
