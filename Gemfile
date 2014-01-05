@@ -1,5 +1,6 @@
 source "https://www.rubygems.org"
 
+gem "activerecord", "4.0.2"
 gem "pg", "0.17.1"
 gem "pry", "0.9.12.4"
 gem "rack", "1.5.2"
