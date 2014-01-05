@@ -1,10 +1,14 @@
 require "spec_helper"
 
-feature URLShortener do
-  background { visit "/" }
+feature "Submitting a URL to shorten" do
+  let(:root_path) { "/" }
+  background { visit root_path }
 
-  scenario "page has a title" do
-    title = page.title
-    expect(title).to eq("URL Shortener")
+  context "via a web form" do
+    scenario "loads the home page" do
+      fill_in :long_url, with: "http://www.foo.com"
+      click_button "Submit"
+      expect(current_path).to eq(root_path)
+    end
   end
 end
