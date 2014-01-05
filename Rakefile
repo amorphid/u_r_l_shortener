@@ -1,2 +1,2 @@
-files = Dir["./tasks/**/*.rake"]
-files.each { |file| import file }
+task_files = Dir["./tasks/**/*.rake"]
+task_files.each { |file| import file }
