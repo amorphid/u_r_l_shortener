@@ -8,6 +8,7 @@ namespace :create do
       ActiveRecord::Base.establish_connection( adapter:  ENV["DATABASE_ADAPTER"],
                                                database: ENV["NON_APP_DATABASE"] )
       ActiveRecord::Base.connection.create_database( ENV["APP_DATABASE"] )
+      ActiveRecord::Base.remove_connection
 
       text  = "\n"
       text += "Rake task successfully completed\n"
