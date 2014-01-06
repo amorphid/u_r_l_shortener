@@ -1,7 +1,7 @@
 require "active_record"
 
 namespace :create do
-  desc "Creates a database called u_r_l_shortener"
+  desc "Creates a database named '#{ENV["APP_DATABASE"]}'"
 
   task :database do
     begin
