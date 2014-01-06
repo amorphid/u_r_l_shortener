@@ -30,7 +30,7 @@ namespace :create do
     slug = ENV["SLUG"]
 
     migration = ActiveRecord::Migration.new
-    next_migration_number = migration.next_migration_number(0)
+    next_migration_number = migration.next_migration_number(last_migration_number)
 
     duplicate = if old_migrations.empty?
       false
