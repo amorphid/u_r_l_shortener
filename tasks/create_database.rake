@@ -11,7 +11,7 @@ namespace :create do
 
       text  = "\n"
       text += "Rake task successfully completed\n"
-      text += "Database '#{ENV["DATABASE_TO_CREATE"]}' has been created\n"
+      text += "Database '#{ENV["APP_DATABASE"]}' has been created\n"
       text += "\n"
 
       puts text
