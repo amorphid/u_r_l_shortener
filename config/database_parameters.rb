@@ -1,3 +1,3 @@
-ENV["DATABASE_ADAPTER"]   = "postgresql"
-ENV["EXISING_DATABASE"]   = "postgres"
-ENV["DATABASE_TO_CREATE"] = "u_r_l_shortener"
+ENV["DATABASE_ADAPTER"] = "postgresql"
+ENV["NON_APP_DATABASE"] = "postgres"
+ENV["APP_DATABASE"]     = "u_r_l_shortener"
